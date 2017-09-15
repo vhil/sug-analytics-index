@@ -7,3 +7,4 @@ bin*/
 *.user
 *.suo
 src/.vs/
+node_modules/
