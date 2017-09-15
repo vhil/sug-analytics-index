@@ -28,7 +28,7 @@ gulp.task("Publish-Solution", function () {
 		targets = ["Clean", "Build"];
 	}
 	var projects = ["./**/Sug*.csproj"];
-	console.log("publish to " + dest + " folder");
+	console.log("publishing to '" + dest + "' folder");
 	return gulp.src(projects)
 	  .pipe(foreach(function (stream, file) {
 	  	return stream
