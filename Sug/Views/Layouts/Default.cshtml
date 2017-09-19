@@ -1,0 +1,27 @@
+﻿@using Sitecore.Analytics
+@using Sitecore.Mvc
+@using Sitecore.Mvc.Analytics.Extensions
+@using Sug.Xdb.Extensions
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head runat="server">
+	<title>Welcome to Sitecore</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="CODE_LANGUAGE" content="C#" />
+	<meta name="vs_defaultClientScript" content="JavaScript" />
+	<meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5" />
+	<link href="@Sitecore.Configuration.Settings.DefaultFontUrl" rel="stylesheet" type="text/css" />
+	<link href="/default.css" rel="stylesheet" />
+	@Html.Sitecore().VisitorIdentification()
+	<sc:VisitorIdentification runat='server'/> 
+</head>
+<body> 
+<div id="MainPanel">
+	@Html.Sitecore().Placeholder("main")
+</div>
+	<!-- Identifier: @(Tracker.Current?.Contact?.Identifiers?.Identifier) -->
+	<!-- Full Name: @(Tracker.Current?.Contact?.GetPersonalFacet().FirstName) @(Tracker.Current?.Contact?.GetPersonalFacet().Surname) -->
+</body>
+</html>

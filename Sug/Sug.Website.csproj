@@ -112,6 +112,22 @@
       <HintPath>..\packages\NLog.4.3.7\lib\net45\NLog.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Sitecore.Analytics, Version=10.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Sitecore.Analytics.NoReferences.8.2.170728\lib\NET452\Sitecore.Analytics.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Sitecore.Kernel, Version=10.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Sitecore.Kernel.NoReferences.8.2.170728\lib\NET452\Sitecore.Kernel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Sitecore.Mvc, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Sitecore.Mvc.NoReferences.8.2.170728\lib\NET452\Sitecore.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Sitecore.Mvc.Analytics, Version=10.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Sitecore.Mvc.Analytics.NoReferences.8.2.170728\lib\NET452\Sitecore.Mvc.Analytics.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Runtime.InteropServices.RuntimeInformation, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Runtime.InteropServices.RuntimeInformation.4.3.0\lib\net45\System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
       <Private>True</Private>
@@ -161,6 +177,10 @@
     <Content Include="packages.config" />
     <Content Include="App_Config\Include\zConfigs\Cabana.Solr.Cores.config" />
     <Content Include="App_Config\Include\Helpfulcore\Helpfulcore.AnalyticsIndexBuilder.config" />
+    <Content Include="Views\Layouts\Default.cshtml" />
+    <Content Include="Views\Sample\SampleSublayout.cshtml" />
+    <Content Include="Views\Sample\SampleInnerSublayout.cshtml" />
+    <Content Include="Views\Sample\SampleRendering.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -176,8 +196,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Views\Layouts\" />
-    <Folder Include="Views\Sample\" />
+    <ProjectReference Include="..\Sug.Xdb\Sug.Xdb.csproj">
+      <Project>{4c0ab9e7-ae4b-45d9-88bf-81da3138df35}</Project>
+      <Name>Sug.Xdb</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
