@@ -295,7 +295,9 @@
   <ItemGroup>
     <Content Include="App_Config\Include\Sug\Sug.Xdb.AnalyticsIndexables.config" />
     <Content Include="App_Config\Include\Sug\Sug.Xdb.Model.config" />
-    <Content Include="App_Config\Include\Sug\Sug.Xdb.Solr.config" />
+    <Content Include="App_Config\Include\Sug\Sug.Xdb.Solr.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="packages.config" />
     <Content Include="sitecore\admin\UpdateCustomerIds.aspx" />
   </ItemGroup>
@@ -326,16 +328,9 @@
     <Compile Include="XdbManager.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Config\Include\Sug\Sug.Xdb.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="web.config" />
-    <None Include="web.Debug.config">
-      <DependentUpon>web.config</DependentUpon>
-    </None>
-    <None Include="web.Release.config">
-      <DependentUpon>web.config</DependentUpon>
-    </None>
+    <Content Include="App_Config\Include\Sug\Sug.Xdb.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
